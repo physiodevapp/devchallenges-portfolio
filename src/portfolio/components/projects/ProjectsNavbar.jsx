@@ -3,7 +3,7 @@ import React from 'react';
 export const ProjectsNavbar = () => {
   return (
     <>
-      <nav className="navbar bg-light border rounded mb-3">
+      <nav className="navbar bg-light border rounded mb-2">
         <div className="container-fluid">
           {/* Navbar title */}
           <span className="navbar-brand mb-0 h1 d-none d-lg-flex">Projects &nbsp;[ 2 ]</span>
