@@ -1,5 +1,5 @@
 import React from "react";
-import { AboutMe, Experiences, Hobbies, Projects, ProjectsNavbar } from "../components";
+import { AboutMe, Experiences, Hobbies, Projects, ProjectsNavbar, Skills } from "../components";
 
 export const OverallView = () => {
   return (
@@ -13,6 +13,7 @@ export const OverallView = () => {
             <Hobbies/>
           </div>
           <div className="col">
+            <Skills/>
             <ProjectsNavbar/>
             <Projects/>
           </div>
