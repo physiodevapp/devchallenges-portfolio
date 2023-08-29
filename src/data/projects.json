@@ -1,0 +1,23 @@
+[
+  {
+    "id": "0",
+    "title": "Tetris",
+    "description": "Classic & addictive arcade game.",
+    "image": "https://github.com/physiodevapp/physiodevapp/blob/main/assets/media/Dise%C3%B1o%20tetris%20readme.png?raw=true",
+    "webside": "frontend"
+  },
+  {
+    "id": "1",
+    "title": "Music Contact",
+    "description": "Backend project to connect musicians looking for a group to play with.",
+    "image": "https://github.com/physiodevapp/physiodevapp/blob/main/assets/media/Dise%C3%B1o%20musict-contact%20readme.png?raw=true",
+    "webside": "backend"
+  },
+  {
+    "id": "2",
+    "title": "What's in the fridge?",
+    "description": "Full stack project to keep track expiration dates of food.",
+    "image": "https://images.hola.com/imagenes/mascotas/20220729214547/pajaro-dodo-curiosidades-ave-extinguida-dn/1-121-94/curiosidades-sobre-la-extincion-del-pajaro-dodo-t.jpg?tx=w_680",
+    "webside": "full-stack"
+  }
+]

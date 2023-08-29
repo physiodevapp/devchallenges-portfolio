@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react'; 
 
 export const Job = () => {
+
+
   return (
     <>
       <div className="card mt-2 border-0 ">

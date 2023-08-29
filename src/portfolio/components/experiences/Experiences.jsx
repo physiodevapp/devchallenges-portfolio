@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Job } from './Job';
 
-export const Experiences = () => {
+
+export const Experiences = () => {  
+
   return (
     <>
       <div className="card mb-4">

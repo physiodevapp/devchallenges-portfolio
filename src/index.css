@@ -101,3 +101,7 @@ body {
   bottom: 20px;
   z-index: 100;
 }
+
+.webside-dropdown {
+  text-transform: capitalize;
+}

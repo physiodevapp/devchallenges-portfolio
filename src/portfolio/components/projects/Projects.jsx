@@ -1,11 +1,15 @@
-import React from 'react'
+// import React;
 import { Project } from './Project';
 
-export const Projects = () => {
+export const Projects = ({projects}) => { 
+
   return (
     <>
-      <Project/>
-      <Project/>
+      {
+        projects.map(({id, title, description, image}) => (
+          <Project key={id} title={title} description={description} image={image}/>
+        ))
+      }
     </>
-  )
-}
+  );
+};
