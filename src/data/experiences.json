@@ -1,0 +1,39 @@
+
+[
+  {
+    "id": "0",
+    "title":"ironhack",
+    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
+    "from":"nov. 2022",
+    "to":"may. 2023",
+    "type":"job",
+    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
+  },
+  {
+    "id": "1",
+    "title":"ironhack",
+    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
+    "from":"nov. 2022",
+    "to":"may. 2023",
+    "type":"education",
+    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
+  },
+  {
+    "id": "2",
+    "title":"ironhack",
+    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
+    "from":"nov. 2022",
+    "to":"may. 2023",
+    "type":"education",
+    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
+  },
+  {
+    "id": "3",
+    "title":"ironhack",
+    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
+    "from":"nov. 2022",
+    "to":"may. 2023",
+    "type":"job",
+    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
+  }
+]

@@ -1,31 +1,228 @@
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 100vw;
-  min-height: 100vh;
-  background-color: lightblue;
-} */
+:root {
+  /* --bs-primary-rgb: */
+}
+
+@media only screen and (max-width : 991.98px) {
+  .skill-img {
+    max-height: 3rem !important;
+    margin: 6px;
+  }
+}
+
+@media only screen and (max-width : 767.98px) {
+  .header {
+    font-size: 1.25rem !important;
+  }
+
+  .projects-card {
+    border: none;
+  }
+}
+
+@media only screen and (max-width : 374.98px) {
+  .header {
+    font-size: 1rem !important;
+  }
+}
+
 
 body {
   margin: 0;
 }
 
+/* LANDING ELEMENT */
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: 90%;
+}
+
+/* HEADER */
+
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: black;
   color: white;
   padding: 20px 0px;
 }
+
+.header-fixed {
+  position: fixed;
+  width: 100vw;
+  z-index: 100;
+}
+
+/* MAIN */
+
+.main {
+  border-top: 0.6em double black;
+}
+
+.bg-portfolio {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-color: #adc;
+}
+
+/* FOOTER */
 
 .footer {
   display: flex;
   justify-content: center;
   background-color: yellow;
   padding: 10px 0px;
-
 }
+
+/* SECTIONS NAVIGATION */
+
+.sections-nav {
+  position: absolute;
+  left: -100px;
+  z-index: 100;
+  font-size: 0.75rem;
+}
+
+.sections-nav .nav-link.active {
+  background: transparent;
+  color: var(--bs-nav-pills-link-active-color) !important;
+}
+
+/* DARK MODE */
+
+.dark .placeholder {
+  background-color: #727577;
+}
+
+.dark .skill-img {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 25%;
+  padding: 4px;
+  border: 0px double white;
+}
+
+.dark.card {
+  border-style: dotted !important;
+  --bs-bg-opacity: 0.8;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
+.dark.go-up-button {
+  border-style: dotted !important;
+}
+
+.dark .nav-pills .nav-link.active {
+  background: #212529;
+  ;
+  border: 1px solid white;
+  color: white;
+}
+
+.dark .nav-pills .nav-link {
+  background: transparent;
+  border: 0px solid white;
+  color: grey;
+}
+
+.dark hr {
+  border-color: white;
+}
+
+/* THEME BUTTON */
+
+.theme-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -50px;
+  z-index: 100;
+  font-size: 0.5rem;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+label {
+  position: relative;
+  /* display: block; */
+  width: 6.5em;
+  height: 4.5em;
+  background: #87ceeb;
+  border: 0px solid;
+  border-radius: 0em;
+  overflow: hidden;
+  transition: 1s;
+}
+
+input:checked+label {
+  background-color: black;
+}
+
+#uncheckedIcon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: 10%;
+  border: 0px solid red;
+  border-radius: 50px;
+  background-color: transparent;
+  color: yellow;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.5s;
+  transform-origin: calc(100%) calc(200%);
+  transform: rotateZ(0deg);
+  font-size: 3em;
+}
+
+input:checked+label #uncheckedIcon {
+  transform: rotateZ(-60deg)
+}
+
+#checkedIcon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  right: 10%;
+  border: 0px solid violet;
+  border-radius: 50px;
+  background-color: transparent;
+  color: white;
+  height: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  transition: 0.5s;
+  transform-origin: calc(0%) calc(200%);
+  transform: rotateZ(60deg);
+  font-size: 3em;
+}
+
+input:checked+label #checkedIcon {
+  transform: rotateZ(0deg);
+}
+
+/* PROJECTS */
 
 .project-bg-img {
   /* background-color: black; */
@@ -34,10 +231,24 @@ body {
   background-repeat: no-repeat;
 }
 
-.skill-img {
-  max-height: 3.6rem;
-  margin: 6px;
+/* ABOUT-ME */
+
+.aboutme-sm img {
+  border-radius: 50%;
+  padding: 20px;
 }
+
+.dark.aboutme-sm img {
+  padding: 2px;
+}
+
+/* EXPERIENCES */
+
+hr {
+  margin: 1rem 1em;
+}
+
+/* HOBBIES */
 
 .hobby-img-overlay {
   display: flex;
@@ -47,6 +258,13 @@ body {
 .hobby-img-overlay>h6 {
   position: relative !important;
   bottom: 0px !important;
+}
+
+/* SKILLS */
+
+.skill-img {
+  max-height: 3.6rem;
+  margin: 6px;
 }
 
 .rotate-center-1 {
@@ -95,11 +313,20 @@ body {
   }
 }
 
+/* GO-UP BUTTON */
+
 .go-up-button {
   position: fixed;
-  right: 20px;
+  right: -50px;
   bottom: 20px;
   z-index: 100;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  width: 50px;
+}
+
+.go-up-button.animate__animated {
+  right: 20px !important;
 }
 
 .webside-dropdown {
