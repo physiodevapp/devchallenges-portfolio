@@ -4,11 +4,11 @@ import { ThemeContext } from '../../contexts/Theme';
 export const Experience = ({ title, description, from, to, image: imageUrl }) => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   return (
     <>
-      <div className={`card mb-4 border-0 bg-transparent ${isDark ? 'text-light' : ''}`}>
+      <div className={`${darkMode} card card-experience border-0 ${isDark ? 'bg-transparent mb-4 text-light' : 'pt-2 mb-2 ms-2 me-2'}`}>
         <div className="row g-0">
           <div className='col pb-1'>
             <div className="card-body pt-0 pb-0 lead">

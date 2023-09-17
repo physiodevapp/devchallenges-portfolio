@@ -16,7 +16,6 @@ const SectionsNavbar = ({ section, showTime }) => {
       window.scrollTo(0, targetElement.offsetParent.offsetTop - targetElement.offsetTop - targetElement.offsetHeight - targetElement.clientHeight + 6);
     }
 
-
   };
 
   useEffect(() => {

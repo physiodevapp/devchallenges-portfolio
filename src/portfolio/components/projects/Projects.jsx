@@ -6,13 +6,13 @@ import { ThemeContext } from '../../contexts/Theme';
 export const Projects = ({ projects }) => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   return (
     <>
       <div className={`${darkMode} card mb-5 projects-card ${isDark ? 'bg-dark border border-3 border-dark' : ''}`}>
         <div className='row'>
-          <div className='col border- border-1'>
+          <div className='col border-1'>
             {
               projects.map(({ id, title, description, image }, index) => (
                 <div key={id}>

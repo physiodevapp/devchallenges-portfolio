@@ -4,7 +4,7 @@ import { ThemeContext } from '../../contexts/Theme';
 export const ThemeButton = ({ faLight, faDark, showTime }) => {
 
   const { isDark, handleTheme } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   const handleToggle = (event) => {
     if (showTime > 1) {
@@ -14,7 +14,7 @@ export const ThemeButton = ({ faLight, faDark, showTime }) => {
 
   return (
     <>
-      <span className={`theme-button me-3 ${showTime > 0.9 ? 'end-0' : ''}`}>
+      <span className={`theme-button me-3 border rounded-2 border-secondary ${isDark ? 'border-0' : 'border-1'} ${showTime > 0.9 ? 'end-0' : ''}`}>
         <input type="checkbox" id="switchDark" name="switchDark" onChange={handleToggle} checked={isDark} />
         <label htmlFor="switchDark" className={`border border-secondary border-0 rounded-2 animate__animated ${showTime > 1 ? 'animate__fadeInRight' : 'animate__fadeOutRight'}`}>
           <div id="uncheckedIcon"><i className={`${faLight} rotate-center-1 fs-5`}></i></div>

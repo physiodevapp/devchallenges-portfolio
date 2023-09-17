@@ -4,7 +4,7 @@ import { ThemeContext } from '../contexts/Theme';
 export const Skills = () => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   return (
     <>

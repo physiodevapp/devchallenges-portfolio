@@ -4,7 +4,7 @@ import { ThemeContext } from '../../contexts/Theme';
 export const ExperiencesNavbar = ({ onChangeType: handleExperienceType, type }) => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   const handleClick = (event, webside) => {
     event.preventDefault();
@@ -13,7 +13,7 @@ export const ExperiencesNavbar = ({ onChangeType: handleExperienceType, type }) 
 
   return (
     <>
-      <nav className={`${darkMode} navbar border-0 ${isDark ? 'bg-dark' : 'bg-light'} border rounded mb-2`}>
+      <nav className={`${darkMode} navbar navbar-experiences border-0 ${isDark ? 'bg-dark' : 'bg-light'} border rounded mb-2`}>
         <div className="container-fluid justify-content-center">
 
           {/* Filter by tags */}

@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
 import { Footer, GoupButton, Header } from "../components";
-import landingBackground from '../../../src/assets/landing-portfolio.png';
-import portfolioBackgroundPortrait from '../../../src/assets/background-portfolio-2.jpg';
-import portfolioBackgroundLandscape from '../../../src/assets/background-portfolio-6.jpg'
 import { ThemeContext } from "../contexts/Theme";
+import bgLandscapeDark from '../../../src/assets/background-portfolio-2.jpg'
+import bgLandscapeLight from '../../../src/assets/background-portfolio-3.jpg'
+import bgPortraitDark from '../../../src/assets/background-portfolio-1.jpg';
+import bgPortraitLight from '../../../src/assets/background-portfolio-3.jpg';
+import landingBackground from '../../../src/assets/landing-portfolio.png';
+import React, { useContext, useEffect, useState } from "react";
 
 function isElementOver(topClass, targetClass, threshold = 0.2) {
   const topElement = document.getElementsByClassName(topClass)[0];
@@ -16,12 +18,12 @@ function isElementOver(topClass, targetClass, threshold = 0.2) {
 export const PortfolioLayout = ({ children }) => {
 
   const [showGoUp, setShowGoUp] = useState(false);
-  const [personalSection, setPersonalSection] = useState();
+  const [portfolioSection, setPortfolioSection] = useState();
   const [opacity, setOpacity] = useState(0);
   const [parallaxIndex, setParallaxIndex] = useState(0);
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   const handleScroll = () => {
 
@@ -30,7 +32,7 @@ export const PortfolioLayout = ({ children }) => {
     const isBottomPage = document.body.offsetHeight - (window.innerHeight + Math.round(window.scrollY)) <= 0;
     const isNearBottomPage = document.body.offsetHeight - (window.innerHeight + Math.round(window.scrollY)) < 50 && window.scrollY > 0;
 
-    setOpacity(Math.pow(scrollIndex - 0.6 > 0 ? (scrollIndex - 0.6) * 4 : 0, 2));
+    setOpacity(Math.pow(scrollIndex - 0.5 > 0 ? (scrollIndex - 0.5) * 4 : 0, 3));
 
     setParallaxIndex(Math.pow(scrollIndex - 0.6 > 0 ? (scrollIndex - 0.6) * 4 : 0, 2));
 
@@ -45,11 +47,11 @@ export const PortfolioLayout = ({ children }) => {
     const isHobbiesOver = isElementOver('header', 'hobbies');
 
     if (isProjectsOver && !isExperiencesOver) {
-      setPersonalSection('projects');
+      setPortfolioSection('projects');
     } else if (isExperiencesOver && !isHobbiesOver && !isNearBottomPage) {
-      setPersonalSection('experiences');
+      setPortfolioSection('experiences');
     } else if (isHobbiesOver || isBottomPage) {
-      setPersonalSection('hobbies');
+      setPortfolioSection('hobbies');
     }
 
   };
@@ -71,12 +73,11 @@ export const PortfolioLayout = ({ children }) => {
       <GoupButton showGoUp={showGoUp} />
 
       <div className="sticky-top position-fixed top-0 container-fluid p-0">
-        <Header personalSection={personalSection} opacity={opacity} />
+        <Header portfolioSection={portfolioSection} opacity={opacity} />
       </div>
 
-      <div className={`bg-portfolio d-md-none`} style={{backgroundImage: `url(${portfolioBackgroundPortrait})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
-
-      <div className={`bg-portfolio d-none d-md-flex`} style={{backgroundImage: `url(${portfolioBackgroundLandscape})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
+      <div className={`bg-portfolio d-md-none`} style={{backgroundImage: `url(${isDark ? bgPortraitDark : bgPortraitLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
+      <div className={`bg-portfolio d-none d-md-flex`} style={{backgroundImage: `url(${isDark ? bgLandscapeDark : bgLandscapeLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
 
       <div className="container-fluid">
 
@@ -96,7 +97,7 @@ export const PortfolioLayout = ({ children }) => {
         </div>
 
         <div className="row">
-          <div className={`col main bg-transparent ${isDark ? 'border-dark' : ''}`}>
+          <div data-section={portfolioSection} className={`${darkMode} col main bg-transparent ${isDark ? 'border-dark' : ''}`}>
             {children}
           </div>
         </div>

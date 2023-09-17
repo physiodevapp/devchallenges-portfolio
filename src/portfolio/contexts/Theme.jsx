@@ -8,12 +8,9 @@ function getDefaultTheme() {
 
 const Theme = ({ children }) => {
 
-  // console.log(getDefaultTheme())
-
   const [isDark, setIsDark] = useState(getDefaultTheme());
 
   const handleTheme = (value) => {
-    // console.log('handleTheme')
     setIsDark(() => value);
 
     localStorage.setItem('dark_mode', value);

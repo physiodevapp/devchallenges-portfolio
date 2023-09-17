@@ -5,13 +5,14 @@ import { ThemeContext } from '../../contexts/Theme';
 export const Hobbies = ({ hobbies }) => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   return (
     <>
-      <nav className={`${darkMode} navbar border ${isDark ? 'bg-dark text-light border-1 border-light' : 'bg-light border-0'} rounded mb-2`}>
+      <nav className={`${darkMode} navbar navbar-hobbies border ${isDark ? 'bg-dark text-light border-0 border-light' : 'bg-light border-0'} rounded mb-2`}>
         <div className="container-fluid justify-content-center fs-5">
-          <nav className="hobbies nav nav-pills flex-sm-row">
+                   
+          <nav className={`hobbies nav nav-pills flex-sm-row ${!isDark ? 'text-light' : ''}`}>
             Hobbies
           </nav>
         </div>

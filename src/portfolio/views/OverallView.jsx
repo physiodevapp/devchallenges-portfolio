@@ -25,7 +25,7 @@ export const OverallView = () => {
 
   useEffect(() => {
     setProjects(() => {
-      const filteredProjects = dataProjects.filter((project) => projectWebside === 'all' ? project.webside : project.webside === projectWebside);
+      const filteredProjects = dataProjects.filter((project) => projectWebside === 'all' ? project.webside.length > 0 : project.webside === projectWebside);
       return filteredProjects;
     });
   }, [projectWebside]);

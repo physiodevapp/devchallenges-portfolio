@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import { ThemeButton } from './ThemeButton';
 import SectionsNavbar from './SectionsNavbar';
+import { ThemeContext } from '../../contexts/Theme';
 
-export const Header = ({ personalSection, opacity }) => {
+export const Header = ({ portfolioSection, opacity }) => {
 
   const [textColor, setTextColor] = useState('white');
 
+  const { isDark } = useContext(ThemeContext);
+  const darkMode = isDark ? 'dark' : 'light';
+
   return (
     <>
-      <h2 className={`header fs-4 mb-0`} style={{ color: textColor, opacity: opacity }}>
+      <h2 className={`${darkMode} header fs-4 mb-0`} style={{ color: textColor, opacity: opacity }}>
 
-        <SectionsNavbar section={personalSection} showTime={opacity} />
+        <SectionsNavbar section={portfolioSection} showTime={opacity} />
 
         {
           opacity && <TypeAnimation
             preRenderFirstString={true}
             sequence={[
-              // Same substring at the start will only be typed out once, initially
               '<Better code>',
               4000,
-              // '<Better code> ... <Better code/>',
-              // () => setTextColor('white'),
-              // 1000,
               '<Better lifes/>',
               8000
             ]}

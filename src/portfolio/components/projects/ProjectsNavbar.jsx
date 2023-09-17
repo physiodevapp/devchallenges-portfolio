@@ -4,7 +4,7 @@ import { ThemeContext } from '../../contexts/Theme';
 export const ProjectsNavbar = ({ onChangeWebside: handleProjectWebside, webside }) => {
 
   const { isDark } = useContext(ThemeContext);
-  const darkMode = isDark ? 'dark' : "";
+  const darkMode = isDark ? 'dark' : 'light';
 
   const handleClick = (event, webside) => {
     event.preventDefault();
@@ -13,7 +13,7 @@ export const ProjectsNavbar = ({ onChangeWebside: handleProjectWebside, webside 
 
   return (
     <>
-      <nav className={`${darkMode} navbar border-0 ${isDark ? 'bg-dark' : 'bg-light'} border rounded mb-2`}>
+      <nav className={`${darkMode} navbar navbar-projects border-0 ${isDark ? 'bg-dark' : 'bg-light'} border rounded mb-2`}>
         <div className="container-fluid justify-content-center justify-content-md-between">
 
           {/* Navbar title */}
