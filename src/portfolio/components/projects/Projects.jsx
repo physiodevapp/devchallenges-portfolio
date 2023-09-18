@@ -10,13 +10,13 @@ export const Projects = ({ projects }) => {
 
   return (
     <>
-      <div className={`${darkMode} card mb-5 projects-card ${isDark ? 'bg-dark border border-3 border-dark' : ''}`}>
+      <div className={`${darkMode} card mb-5 ${isDark ? 'bg-dark border border-3 border-dark' : ''}`}>
         <div className='row'>
           <div className='col border-1'>
             {
-              projects.map(({ id, title, description, image }, index) => (
+              projects.map(({ id, title, description, demo, code, image }, index) => (
                 <div key={id}>
-                  <Project key={id} title={title} description={description} image={image} />
+                  <Project key={id} title={title} description={description} image={image} demo={demo} code={code} />
                   { index < projects.length - 1 && <hr /> }
                 </div>
               ))

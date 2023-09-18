@@ -10,8 +10,8 @@ export const Skills = () => {
     <>
       <nav className={`${darkMode} navbar border-0 d-none d-md-flex ${isDark ? 'bg-dark text-light' : 'bg-light'} border rounded mb-2`}>
         <div className="container-fluid justify-content-start fs-4">
-          <nav className="hobbies nav nav-pills flex-sm-row">
-          <span className={`navbar-brand mb-0 h1 d-none d-md-flex ${isDark ? 'text-light': ''}`}>Skills</span>
+          <nav className="nav nav-pills flex-sm-row">
+          <span className={`navbar-brand ms-2 mb-0 h1 d-none d-md-flex ${isDark ? 'text-light': 'text-light'}`}>Skills</span>
           </nav>
         </div>
       </nav>

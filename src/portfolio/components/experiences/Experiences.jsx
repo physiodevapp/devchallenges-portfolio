@@ -14,9 +14,9 @@ export const Experiences = ({ experiences }) => {
       <div className={`${darkMode} card mb-5 ${isDark ? 'bg-dark border border-3 border-dark pt-4' : 'pt-2'}`}>
         {/* <div className="experiences card-header text-center text-sm-start fs-5 mb-2">Experience & Education</div> */}
         {
-          experiences.map(({ id, title, description, from, to, image }, index) => (
+          experiences.map(({ id, title, description, from, to, link, image }, index) => (
             <div key={id} className='col border-1'>
-              <Experience key={id} title={title} description={description} from={from} to={to} image={image} />
+              <Experience key={id} title={title} description={description} from={from} to={to} image={image} link={link} />
               { index < experiences.length - 1 && <hr/> }
             </div>
           ))

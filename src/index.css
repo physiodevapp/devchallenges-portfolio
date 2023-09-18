@@ -11,16 +11,18 @@
 
   --dark-color-4: #727577;
 
-  --light-color-5: rgb(38, 53, 71);
+  --light-color-5: rgba(38, 53, 71, 0.75);
 
   --light-color-6: #7c96af;
 
   --light-color-7: #c1c2c4ba;
 
-  --light-color-8: var(--bs-light-rgb);
+  --light-color-8: rgba(var(--bs-light-rgb), 0.4);
 
-  --light-color-9: rgb(255 255 255 / 60%);
-  --dark-color-9: grey;
+  --light-color-9: rgba(var(--bs-light-rgb), 0.4);
+
+  --light-color-10: rgb(255 255 255 / 60%);
+  --dark-color-10: grey;
 }
 
 @media only screen and (max-width: 991.98px) {
@@ -184,9 +186,12 @@ body {
   background-repeat: no-repeat;
 }
 
+/* .light.projects-card {
+  background-color: var(--light-color-8);
+} */
+
 .light.project-sm .card-title {
-  --bg-opacity: 0.75;
-  background-color: rgb(var(--light-color-5), var(--bg-opacity)) !important;
+  background-color: var(--light-color-5) !important;
 }
 
 .light.card-project .btn-warning, .light.project-sm .btn-warning {
@@ -289,9 +294,13 @@ input:checked + label #checkedIcon {
   padding: 2px;
 }
 
-.light .card-aboutme .card-text, .light .card-aboutme .btn {
+.light .card-aboutme .btn {
   background-color: var(--light-color-7) !important;
-} 
+}
+
+.light .card-aboutme .card-text {
+  background-color: var(--light-color-9) !important;
+}
 
 /* HOBBIES */
 
@@ -406,22 +415,25 @@ input:checked + label #checkedIcon {
 }
 
 .light.card {
-  border-color: rgb(107, 134, 161);
+  border-color: var(--light-color-3);
   border-style: dotted !important;
-  --bs-bg-opacity: 0.4;
-  background-color: rgba(var(--light-color-8), var(--bs-bg-opacity)) !important;
+  background-color: var(--light-color-8) !important;
+}
+
+.light.card-child {
+  background-color: var(--light-color-9) !important;
 }
 
 .dark .nav-pills .nav-link {
   background: transparent;
   border: 0px solid white;
-  color: var(--dark-color-9);
+  color: var(--dark-color-10);
 }
 
 .light .nav-pills .nav-link {
   background: transparent;
   border: 0px solid white;
-  color: var(--light-color-9);
+  color: var(--light-color-10);
 }
 
 .dark hr, .light hr {

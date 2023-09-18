@@ -18,7 +18,7 @@ export const ProjectsNavbar = ({ onChangeWebside: handleProjectWebside, webside 
 
           {/* Navbar title */}
 
-          <span className={`navbar-brand mb-0 h1 d-none d-md-flex ${isDark ? 'text-light' : ''}`}>Projects</span>
+          <span className={`navbar-brand ms-2 mb-0 h1 d-none d-md-flex ${isDark ? 'text-light' : 'text-light'}`}>Projects</span>
 
           {/* Filter by tags */}
 

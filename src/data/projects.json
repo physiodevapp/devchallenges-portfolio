@@ -3,6 +3,8 @@
     "id": "0",
     "title": "Tetris",
     "description": "Classic & addictive arcade game.",
+    "demo":"https://physiodevapp.github.io/tetris/",
+    "code":"https://github.com/physiodevapp/tetris",
     "image": "https://github.com/physiodevapp/physiodevapp/blob/main/assets/media/Dise%C3%B1o%20tetris%20readme.png?raw=true",
     "webside": "frontend"
   },
@@ -10,6 +12,8 @@
     "id": "1",
     "title": "Music Contact",
     "description": "Backend project to connect musicians looking for a group to play with.",
+    "demo":"https://music-contact.fly.dev/artists?sort=desc",
+    "code":"https://github.com/music-contact/music-contact",
     "image": "https://github.com/physiodevapp/physiodevapp/blob/main/assets/media/Dise%C3%B1o%20musict-contact%20readme.png?raw=true",
     "webside": "backend"
   },
@@ -17,7 +21,9 @@
     "id": "2",
     "title": "What's in the fridge?",
     "description": "Full stack project to keep track expiration dates of food.",
-    "image": "https://images.hola.com/imagenes/mascotas/20220729214547/pajaro-dodo-curiosidades-ave-extinguida-dn/1-121-94/curiosidades-sobre-la-extincion-del-pajaro-dodo-t.jpg?tx=w_680",
+    "demo":"",
+    "code":"https://github.com/physiodevapp/whats-in-the-fridge",
+    "image": "https://raw.githubusercontent.com/physiodevapp/whats-in-the-fridge/main/web/src/assets/images/login.jpg",
     "webside": "full-stack"
   }
 ]

@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 const ThemeContext = createContext();
 
 function getDefaultTheme() {
-  return localStorage.getItem('dark_mode') === 'true' ? true : false;
+  return localStorage.getItem('dark_mode') === 'false' ? false : true;
 }
 
 const Theme = ({ children }) => {

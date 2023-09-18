@@ -1,18 +1,18 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts/Theme';
 
-export const Experience = ({ title, description, from, to, image: imageUrl }) => {
+export const Experience = ({ title, description, from, to, link: linkUrl,  image: imageUrl }) => {
 
   const { isDark } = useContext(ThemeContext);
   const darkMode = isDark ? 'dark' : 'light';
 
   return (
     <>
-      <div className={`${darkMode} card card-experience border-0 ${isDark ? 'bg-transparent mb-4 text-light' : 'pt-2 mb-2 ms-2 me-2'}`}>
+      <div className={`${darkMode} card card-child border-0 ${isDark ? 'bg-transparent mb-4 text-light' : 'pt-2 mb-2 ms-2 me-2'}`}>
         <div className="row g-0">
           <div className='col pb-1'>
             <div className="card-body pt-0 pb-0 lead">
-              <span className='card-title text-capitalize'>{from} - {to}</span>
+              <span className='card-title text-capitalize'>{`${from} ${to.length > 0 ? `- ${to}` : ''}`}</span>
             </div>
           </div>
         </div>
@@ -23,8 +23,8 @@ export const Experience = ({ title, description, from, to, image: imageUrl }) =>
           </div>
           <div className="col-8 col-xl-9 pb-1 d-flex align-items-start pt-2">
             <div className="card-body pt-0 pb-0">
-              <h5 className="card-title text-capitalize pt-1">{title}</h5>
-              <span className="card-title d-flex">{description}</span>
+              <a href={linkUrl} target="_blank" rel="noreferrer"  className={`card-title text-capitalize pt-1 fs-4 ${!linkUrl.length ? 'text-decoration-none' : ''} ${isDark ? 'text-light' : 'text-dark' }`} onClick={(ev) => !linkUrl.length ? ev.preventDefault() : ''}>{title}</a>
+              <span className="card-title d-flex p-2 ps-0 pe-0 pb-0">{description}</span>
             </div>
           </div>
         </div>

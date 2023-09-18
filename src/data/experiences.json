@@ -3,20 +3,22 @@
   {
     "id": "0",
     "title":"ironhack",
-    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
+    "description":"Proyectos en Bootcamp de Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
     "from":"nov. 2022",
     "to":"may. 2023",
     "type":"job",
+    "link":"",
     "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
   },
   {
     "id": "1",
-    "title":"ironhack",
-    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
-    "from":"nov. 2022",
-    "to":"may. 2023",
+    "title":"Udemy",
+    "description":"React: De cero a experto (Hooks y MERN)",
+    "from":"jul. 2023",
+    "to":"",
     "type":"education",
-    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
+    "link":"https://www.udemy.com/certificate/UC-52269545-0e60-4e72-96a7-16a2be92197c/",
+    "image":"data:image/png;base64,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"
   },
   {
     "id": "2",
@@ -25,15 +27,7 @@
     "from":"nov. 2022",
     "to":"may. 2023",
     "type":"education",
-    "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
-  },
-  {
-    "id": "3",
-    "title":"ironhack",
-    "description":"Bootcamp en Desarrollo Web Full-Stack, Desarrollo de aplicaciones web",
-    "from":"nov. 2022",
-    "to":"may. 2023",
-    "type":"job",
+    "link":"https://www.credential.net/377ada88-bc83-4967-89c1-c99a03424b34#gs.5vto4p",
     "image":"https://media.licdn.com/dms/image/C4D0BAQG2NHDv2YWLyA/company-logo_100_100/0/1669206756299?e=1702512000&v=beta&t=Pzp-OUgCMObwoEwvUD5U_ZA9MRCaacFd3u0JwmWYQJY"
   }
 ]

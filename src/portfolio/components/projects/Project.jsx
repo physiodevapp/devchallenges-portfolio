@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { ThemeContext } from '../../contexts/Theme';
 
-export const Project = ({ title, description, image: imageUrl }) => {
+export const Project = ({ title, description, image: imageUrl, demo: demoUrl, code: codeUrl }) => {
 
   const { isDark } = useContext(ThemeContext);
   const darkMode = isDark ? 'dark' : 'light';
@@ -30,7 +30,7 @@ export const Project = ({ title, description, image: imageUrl }) => {
         </div>
       </div>}
 
-      {isLoaded && <div className={`${darkMode} card card-project mb-2 d-none d-md-flex bg-transparent border border-0 ${!isDark ? 'm-2 rounded-2 p-2 ps-3 pe-3' : ''}`}>
+      {isLoaded && <div className={`${darkMode} card card-child card-project mb-2 d-none d-md-flex bg-transparent border border-0 ${!isDark ? 'm-2 rounded-2 p-2 ps-3 pe-3' : ''}`}>
         <div className="row g-0">
           <div className="col-md-4 project-bg-img rounded-start border-0"  style={{ backgroundImage: `url(${imageUrl})` }}></div>
           <img src={imageUrl} onLoad={handleOnload} style={{display: "none"}} />
@@ -38,8 +38,8 @@ export const Project = ({ title, description, image: imageUrl }) => {
             <div className="card-body">
               <h5 className={`card-title ${isDark ? 'text-light' : ''}`}>{title}</h5>
               <p className={`card-text d-none d-sm-flex ${isDark ? 'text-light' : ''}`}>{description}</p>
-              <a href="#" className={`btn ${isDark ? 'btn-light' : 'border border-0 btn-light'} me-2`} onClick={(ev) => ev.preventDefault()}>View</a>
-              <a href="#" className={`btn ${isDark ? 'btn-outline-light' : 'border border-1 btn-warning text-white'}`} onClick={(ev) => ev.preventDefault()}>Code</a>
+              {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light' : 'border border-0 btn-light'} me-2`}>View</a>}
+              <a href={codeUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-outline-light' : 'border border-1 btn-warning text-white'}`}>Code</a>
             </div>
           </div>
         </div>
@@ -58,13 +58,13 @@ export const Project = ({ title, description, image: imageUrl }) => {
         </span>
       </div>}
 
-      {<div className={`${darkMode} card project-sm text-bg-dark border-0 m-2 d-md-none bg-transparent ${isLoaded ? '' : 'd-none'} ${!isDark ? 'rounded-2 p-2 ps-3 pe-3' : ''}`}>
+      {<div className={`${darkMode} card card-child project-sm text-bg-dark border-0 m-2 d-md-none bg-transparent ${isLoaded ? '' : 'd-none'} ${!isDark ? 'rounded-2 p-0 ps-0 pe-0' : ''}`}>
         <img src={imageUrl} onLoad={handleOnload} className="card-img" alt="..." />
         <div className="card-img-overlay hobby-img-overlay">
-          <h5 className="card-title ms-4 p-1 ps-2 pe-2 rounded-2 bg-dark border border-white bg-opacity-75" style={{ position: "absolute", top: "10px", left: "0px" }}>{title}</h5>
+          <h5 className={`card-title ms-4 p-1 ps-2 pe-2 rounded-2 bg-dark border border-white bg-opacity-75 ${!isDark ? 'mt-2' : 'mt-0' }`} style={{ position: "absolute", top: "10px", left: "0px" }}>{title}</h5>
           <div className='col-12 ms-4' style={{ position: "absolute", bottom: "10px", left: "0px" }}>
-            <a href="#" className={`btn ${isDark ? 'btn-light' : 'btn-light mb-1'} col-3`} onClick={(ev) => ev.preventDefault()}>View</a>
-            <a href="#" className={`btn ${isDark ? 'btn-dark' : 'border border-1 text-light btn-warning mb-1'} ms-2 col-3`} onClick={(ev) => ev.preventDefault()}>Code</a>
+            {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light' : 'btn-light mb-2 me-2'} col-3`}>View</a>}
+            <a href={codeUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-dark' : 'border border-1 text-light btn-warning mb-2'} ms-0 col-3`}>Code</a>
           </div>
         </div>
       </div>}

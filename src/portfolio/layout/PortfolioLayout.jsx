@@ -1,7 +1,7 @@
 import { Footer, GoupButton, Header } from "../components";
 import { ThemeContext } from "../contexts/Theme";
 import bgLandscapeDark from '../../../src/assets/background-portfolio-2.jpg'
-import bgLandscapeLight from '../../../src/assets/background-portfolio-3.jpg'
+import bgLandscapeLight from '../../../src/assets/background-portfolio-4.jpg'
 import bgPortraitDark from '../../../src/assets/background-portfolio-1.jpg';
 import bgPortraitLight from '../../../src/assets/background-portfolio-3.jpg';
 import landingBackground from '../../../src/assets/landing-portfolio.png';
@@ -106,11 +106,11 @@ export const PortfolioLayout = ({ children }) => {
           </div>
         </div>
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col p-0">
             <Footer />
           </div>
-        </div>
+        </div> */}
 
       </div>
     </>
