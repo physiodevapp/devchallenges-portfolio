@@ -6,8 +6,10 @@ export const AboutMe = ({ name, aboutme, image: imageUrl }) => {
   const { isDark } = useContext(ThemeContext);
   const darkMode = isDark ? 'dark' : 'light';
 
-  const handleClick = (event) => {
-    event.preventDefault();
+  const handleClick = (event, propagation) => {
+    if (propagation) {
+      event.preventDefault();
+    }
   };
 
   return (
@@ -18,9 +20,9 @@ export const AboutMe = ({ name, aboutme, image: imageUrl }) => {
         </div>
 
         <div className="btn-group p-3 pt-1 pb-1" role="group" aria-label="Basic example">
-          <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={handleClick}><i className="fa-brands fa-linkedin"></i></a>
-          <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={handleClick}><i className="fa-brands fa-github"></i></a>
-          <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4`} onClick={handleClick}><i className="fa-brands fa-google"></i></a>
+          <a href='https://www.linkedin.com/in/edu-gamboa/' target="_blank" rel="noreferrer" type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={(ev) => handleClick(ev, false)}><i className="fa-brands fa-linkedin"></i></a>
+          <a href='https://github.com/physiodevapp' target="_blank" rel="noreferrer" type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={(ev) => handleClick(ev, false)}><i className="fa-brands fa-github"></i></a>
+          <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4`} onClick={(ev) => handleClick(ev, true)}>CV</a>
         </div>
 
         <div className="card-body">
@@ -43,9 +45,9 @@ export const AboutMe = ({ name, aboutme, image: imageUrl }) => {
             </div>
           </div>
           <div className="content-fluid btn-group p-3 pt-1" role="group" aria-label="Basic example">
-            <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={handleClick}><i className="fa-brands fa-linkedin"></i></a>
-            <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={handleClick}><i className="fa-brands fa-github"></i></a>
-            <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4`} onClick={handleClick}><i className="fa-brands fa-google"></i></a>
+            <a href='https://www.linkedin.com/in/edu-gamboa/' target="_blank" rel="noreferrer" type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={(ev) => handleClick(ev, false)}><i className="fa-brands fa-linkedin"></i></a>
+            <a href='https://github.com/physiodevapp' target="_blank" rel="noreferrer" type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4 border-end-0`} onClick={(ev) => handleClick(ev, false)}><i className="fa-brands fa-github"></i></a>
+            <a href='#' type="button" className={`btn ${isDark ? 'btn-dark border-secondary' : 'btn-outline-light border border-2'} pt-0 pb-0 fs-4`} onClick={(ev) => handleClick(ev, true)}><i className="fa-brands fa-google"></i></a>
           </div>
         </div>
       </div>

@@ -29,7 +29,8 @@ export const PortfolioLayout = ({ children }) => {
 
     const scrollIndex = (window.scrollY / window.outerHeight).toFixed(2);
 
-    const isBottomPage = document.body.offsetHeight - (window.innerHeight + Math.round(window.scrollY)) <= 0;
+    const isBottomPage = document.body.offsetHeight - (window.innerHeight + Math.round(window.scrollY)) <= 1;
+
     const isNearBottomPage = document.body.offsetHeight - (window.innerHeight + Math.round(window.scrollY)) < 50 && window.scrollY > 0;
 
     setOpacity(Math.pow(scrollIndex - 0.5 > 0 ? (scrollIndex - 0.5) * 4 : 0, 3));
@@ -53,6 +54,9 @@ export const PortfolioLayout = ({ children }) => {
     } else if (isHobbiesOver || isBottomPage) {
       setPortfolioSection('hobbies');
     }
+    // if (isBottomPage && portfolioSection !== 'hobbies') {
+    //   setPortfolioSection('hobbies');
+    // }
 
   };
 

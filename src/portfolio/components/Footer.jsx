@@ -8,7 +8,7 @@ export const Footer = () => {
 
   return (
     <div className={`${darkMode} footer ${isDark ? 'bg-dark text-light' : ''}`}>
-      <h5>Footer</h5>
+      <h5></h5>
     </div>
   )
 }

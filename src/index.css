@@ -1,6 +1,26 @@
 :root {
   /* LIGHT THEME */
-  /* --bs-primary-rgb: */
+  --light-color-1: #263547;
+  --dark-color-1: black;
+
+  --light-color-2: rgb(107, 134, 161);
+  --dark-color-2: #212529;
+
+  --light-color-3: #6b86a1;
+  --dark-color-3 : rgba(var(--bs-dark-rgb), 1);
+
+  --dark-color-4: #727577;
+
+  --light-color-5: rgb(38, 53, 71);
+
+  --light-color-6: #7c96af;
+
+  --light-color-7: #c1c2c4ba;
+
+  --light-color-8: var(--bs-light-rgb);
+
+  --light-color-9: rgb(255 255 255 / 60%);
+  --dark-color-9: grey;
 }
 
 @media only screen and (max-width: 991.98px) {
@@ -60,11 +80,11 @@ body {
 }
 
 .dark.header {
-  background-color: black;
+  background-color: var(--dark-color-1);
 }
 
 .light.header {
-  background-color: #263547;
+  background-color: var(--light-color-1);
 }
 
 .light.header .nav-pills .nav-link.active  {
@@ -75,13 +95,13 @@ body {
 /* MAIN */
 
 .main .dark .nav-pills .nav-link.active{
-  background: #212529;
+  background: var(--dark-color-2);
   border: 1px solid white;
   color: white;
 }
 
 .main .light .nav-pills .nav-link.active  {
-  background-color: rgb(107, 134, 161) !important;
+  background-color: var(--light-color-2) !important;
   border: 1px solid white;
   color: white !important;
 }
@@ -126,12 +146,12 @@ body {
 .footer {
   display: flex;
   justify-content: center;
-  background-color: yellow;
+  background-color: var(--dark-color-3);
   padding: 10px 0px;
 }
 
 .light.footer {
-  background-color: #6b86a1;
+  background-color: var(--light-color-3);
   color: white;
 }
 
@@ -152,22 +172,29 @@ body {
 /* SKELETON */
 
 .dark .placeholder {
-  background-color: #727577;
+  background-color: var(--dark-color-4);
 }
 
 /* PROJECT */
 
+.project-bg-img {
+  /* background-color: black; */
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .light.project-sm .card-title {
   --bg-opacity: 0.75;
-  background-color: rgb(38, 53, 71, var(--bg-opacity)) !important;
+  background-color: rgb(var(--light-color-5), var(--bg-opacity)) !important;
 }
 
 .light.card-project .btn-warning, .light.project-sm .btn-warning {
-  background-color: #6b86a1 !important;
+  background-color: var(--light-color-3) !important;
 }
 
 .light.card-project .btn-warning:active, .light.card-project .btn-warning:hover {
-  background-color: #7c96af !important;
+  background-color: var(--light-color-6) !important;
 }
 
 /* THEME BUTTON */
@@ -251,15 +278,6 @@ input:checked + label #checkedIcon {
   transform: rotateZ(0deg);
 }
 
-/* PROJECTS */
-
-.project-bg-img {
-  /* background-color: black; */
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 /* ABOUT-ME */
 
 .aboutme-sm img {
@@ -272,7 +290,7 @@ input:checked + label #checkedIcon {
 }
 
 .light .card-aboutme .card-text, .light .card-aboutme .btn {
-  background-color: #c1c2c4ba !important;
+  background-color: var(--light-color-7) !important;
 } 
 
 /* HOBBIES */
@@ -292,9 +310,6 @@ input:checked + label #checkedIcon {
 .skill-img {
   max-height: 3.6rem;
   margin: 6px;
-}
-
-.skill-img {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 25%;
   padding: 4px;
@@ -367,7 +382,7 @@ input:checked + label #checkedIcon {
 }
 
 .light.go-up-button {
-  background-color: #6b86a1 !important;
+  background-color: var(--light-color-3) !important;
 }
 
 .go-up-button.animate__animated {
@@ -387,26 +402,26 @@ input:checked + label #checkedIcon {
 .dark.card {
   border-style: dotted !important;
   --bs-bg-opacity: 0.8;
-  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity));
+  background-color: rgba(var(--dark-color-3), var(--bs-bg-opacity));
 }
 
 .light.card {
   border-color: rgb(107, 134, 161);
   border-style: dotted !important;
   --bs-bg-opacity: 0.4;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--light-color-8), var(--bs-bg-opacity)) !important;
 }
 
 .dark .nav-pills .nav-link {
   background: transparent;
   border: 0px solid white;
-  color: grey;
+  color: var(--dark-color-9);
 }
 
 .light .nav-pills .nav-link {
   background: transparent;
   border: 0px solid white;
-  color: rgb(255 255 255 / 60%);
+  color: var(--light-color-9);
 }
 
 .dark hr, .light hr {
