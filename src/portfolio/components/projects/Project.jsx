@@ -63,7 +63,7 @@ export const Project = ({ title, description, image: imageUrl, demo: demoUrl, co
         <div className="card-img-overlay hobby-img-overlay">
           <h5 className={`card-title ms-4 p-1 ps-2 pe-2 rounded-2 bg-dark border border-white bg-opacity-75 ${!isDark ? 'mt-2' : 'mt-0' }`} style={{ position: "absolute", top: "10px", left: "0px" }}>{title}</h5>
           <div className='col-12 ms-4' style={{ position: "absolute", bottom: "10px", left: "0px" }}>
-            {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light' : 'btn-light mb-2 me-2'} col-3`}>View</a>}
+            {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light me-2' : 'btn-light mb-2 me-2'} col-3`}>View</a>}
             <a href={codeUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-dark' : 'border border-1 text-light btn-warning mb-2'} ms-0 col-3`}>Code</a>
           </div>
         </div>
