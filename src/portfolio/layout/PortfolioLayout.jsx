@@ -80,8 +80,11 @@ export const PortfolioLayout = ({ children }) => {
         <Header portfolioSection={portfolioSection} opacity={opacity} />
       </div>
 
-      <div className={`bg-portfolio d-md-none`} style={{backgroundImage: `url(${isDark ? bgPortraitDark : bgPortraitLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
-      <div className={`bg-portfolio d-none d-md-flex`} style={{backgroundImage: `url(${isDark ? bgLandscapeDark : bgLandscapeLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`}}></div>
+      <div className={`bg-portfolio d-md-none`} style={{backgroundImage: `url(${bgPortraitLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`, zIndex: `${isDark ? '-2' : '-1'}`}}></div>
+      <div className={`bg-portfolio d-md-none`} style={{backgroundImage: `url(${bgPortraitDark})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`, zIndex: `${isDark ? '-1' : '-2'}`}}></div>
+
+      <div className={`bg-portfolio d-none d-md-flex`} style={{backgroundImage: `url(${bgLandscapeLight})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`, zIndex: `${isDark ? '-2' : '-1'}`}}></div>
+      <div className={`bg-portfolio d-none d-md-flex`} style={{backgroundImage: `url(${bgLandscapeDark})`, top: `${60 - parallaxIndex * 0.8 >= 0 ? 60 - parallaxIndex * 0.8 : 0}px`, zIndex: `${isDark ? '-1' : '-2'}`}}></div>
 
       <div className="container-fluid">
 
