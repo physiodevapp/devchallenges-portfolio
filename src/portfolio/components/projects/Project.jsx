@@ -61,10 +61,10 @@ export const Project = ({ title, description, image: imageUrl, demo: demoUrl, co
       {<div className={`${darkMode} card card-child project-sm text-bg-dark border-0 m-2 d-md-none bg-transparent ${isLoaded ? '' : 'd-none'} ${!isDark ? 'rounded-2 p-0 ps-0 pe-0' : ''}`}>
         <img src={imageUrl} onLoad={handleOnload} className="card-img" alt="..." />
         <div className="card-img-overlay hobby-img-overlay">
-          <h5 className={`card-title ms-4 p-1 ps-2 pe-2 rounded-2 bg-dark border border-white bg-opacity-75 ${!isDark ? 'mt-2' : 'mt-0' }`} style={{ position: "absolute", top: "10px", left: "0px" }}>{title}</h5>
+          <h5 className={`card-title ms-4 p-1 ps-2 pe-2 rounded-2 bg-dark border border-white bg-opacity-75`} style={{ position: "absolute", top: "10px", left: "0px" }}>{title}</h5>
           <div className='col-12 ms-4' style={{ position: "absolute", bottom: "10px", left: "0px" }}>
-            {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light me-2' : 'btn-light mb-2 me-2'} col-3`}>View</a>}
-            <a href={codeUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-dark' : 'border border-1 text-light btn-warning mb-2'} ms-0 col-3`}>Code</a>
+            {demoUrl.length > 0 && <a href={demoUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-light me-2' : 'btn-light me-2'} col-3`}>View</a>}
+            <a href={codeUrl} target="_blank" rel="noreferrer" className={`btn ${isDark ? 'btn-dark' : 'border border-1 text-light btn-warning'} ms-0 col-3`}>Code</a>
           </div>
         </div>
       </div>}

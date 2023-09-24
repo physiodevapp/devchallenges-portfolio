@@ -405,7 +405,12 @@ input:checked + label #checkedIcon {
 /* OTHER */
 
 .light.navbar {
-  background-color: #bcbdbf !important;
+  /* background-color: #bcbdbf !important; */
+  background-color: #fefefed9 !important;
+}
+
+.light.navbar nav, .light.navbar span, .light.navbar nav span {
+  color: var(--light-color-2) !important;
 }
 
 .dark.card {
@@ -433,7 +438,8 @@ input:checked + label #checkedIcon {
 .light .nav-pills .nav-link {
   background: transparent;
   border: 0px solid white;
-  color: var(--light-color-10);
+  /* color: var(--light-color-10); */
+  color: var(--light-color-2);
 }
 
 .dark hr, .light hr {

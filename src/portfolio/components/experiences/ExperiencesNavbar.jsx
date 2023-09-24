@@ -19,7 +19,7 @@ export const ExperiencesNavbar = ({ onChangeType: handleExperienceType, type }) 
           {/* Filter by tags */}
           
           <nav className="experiences nav nav-pills flex-sm-row">
-            <a className={`flex-sm-fill text-sm-center nav-link ${type === 'job' ? 'active' : ''}`} href="#" onClick={(ev) => handleClick(ev, "job")}>Experience</a>
+            <a className={`flex-sm-fill text-sm-center nav-link me-3 ${type === 'job' ? 'active' : ''}`} href="#" onClick={(ev) => handleClick(ev, "job")}>Experience</a>
             <a className={`flex-sm-fill text-sm-center nav-link ${type === 'education' ? 'active' : ''}`} href="#" onClick={(ev) => handleClick(ev, "education")}>Education</a>
           </nav>
         </div>
