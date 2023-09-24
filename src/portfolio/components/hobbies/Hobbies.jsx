@@ -12,7 +12,7 @@ export const Hobbies = ({ hobbies }) => {
       <nav className={`${darkMode} navbar navbar-hobbies border ${isDark ? 'bg-dark text-light border-0 border-light' : 'bg-light border-0'} rounded mb-2`}>
         <div className="container-fluid justify-content-center fs-5">
                    
-          <nav className={`hobbies navbar-brand nav nav-pills flex-sm-row h1 ${!isDark ? 'text-light' : ''}`}>
+          <nav className={`hobbies navbar-brand nav nav-pills flex-sm-row h1 ${isDark ? 'text-light' : ''}`}>
             Hobbies
           </nav>
         </div>

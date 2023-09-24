@@ -409,7 +409,7 @@ input:checked + label #checkedIcon {
   background-color: #fefefed9 !important;
 }
 
-.light.navbar nav, .light.navbar span, .light.navbar nav span {
+.light.navbar .navbar-brand {
   color: var(--light-color-2) !important;
 }
 
