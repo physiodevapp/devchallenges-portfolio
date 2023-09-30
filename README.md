@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](https://github.com/physiodevapp/devchallenges-portfolio/blob/main/Project%20Screenshot.jpg)
 
 This challenge has allowed me to put into practice concepts related to the structuring of the project, as well as combine the useState() and useEffect() hooks with the onScroll event. I have also tried to start applying clean code concepts, especially in some parts of the project and learn more about Bootstrap and its functionalities. Of course, I will continue to review and implement the project as I continue to learn to code better!
 
@@ -85,7 +85,7 @@ $ npm start
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
 
 - [react-type-animation](https://www.npmjs.com/package/react-type-animation)
-- [React folder structre](https://blog.webdevsimplified.com/2022-07/react-folder-structure/)
+- [React folder structure](https://blog.webdevsimplified.com/2022-07/react-folder-structure/)
 - [Implement Dark Mode in React via Context](https://dev.to/sanspanic/implementing-dark-mode-in-react-via-context-4f1p?utm_source=pocket_reader)
 
 ## Contact
