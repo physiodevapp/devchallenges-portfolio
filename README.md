@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/physiodevapp/devchallenges-portfolio">
+    <a href="https://legacy.devchallenges.io/solutions/dHnt5KvOabvUf3hkaA0m">
       Solution
     </a>
     <span> | </span>
