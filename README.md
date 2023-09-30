@@ -37,7 +37,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/physiodevapp/devchallenges-portfolio/blob/main/Project%20Screenshot.jpg)
+![screenshot](https://github.com/physiodevapp/devchallenges-portfolio/blob/main/Project%20screenshot.png)
 
 This challenge has allowed me to put into practice concepts related to the structuring of the project, as well as combine the useState() and useEffect() hooks with the onScroll event. I have also tried to start applying clean code concepts, especially in some parts of the project and learn more about Bootstrap and its functionalities. Of course, I will continue to review and implement the project as I continue to learn to code better!
 
